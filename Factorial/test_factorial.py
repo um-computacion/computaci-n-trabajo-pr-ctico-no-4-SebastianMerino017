@@ -20,3 +20,12 @@ class TestFactorial(unittest.TestCase):
         self.assertEqual(factorial_recursive(1), 1)
         self.assertEqual(factorial_recursive(5), 120)
         self.assertEqual(factorial_recursive(10), 3628800)
+
+    def test_factorial_recursive_negative_numbers(self):
+        with self.assertRaises(ValueError):
+            factorial_recursive(-1)
+        with self.assertRaises(ValueError):
+            factorial_recursive(-5)
+
+if __name__ == "__main__":
+    unittest.main()
